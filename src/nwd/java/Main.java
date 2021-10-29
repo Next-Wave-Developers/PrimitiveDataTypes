@@ -2,7 +2,7 @@ package nwd.java;
 
 public class Main {
 
-    static void iBSL(){
+    static void iBSL() {
                 	/*find more info on Primitive Data Types at
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
 
@@ -22,7 +22,9 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
 
         int myMaxIntValue = Integer.MAX_VALUE;
 
-        System.out.println("~~Integer Values~~");
+        System.out.println("~~ Integers ~~");
+        System.out.println("Integers are whole numbers. " + "\n" +
+                "Any whole number between the minimum and maximum values can be stored in an int." + "\n");
         System.out.println("Integer Minimum Value = " + myMinIntValue);
         System.out.println("Integer Maximum Value = " + myMaxIntValue);
         System.out.println("Busted MAX value = " + (myMaxIntValue + 1));
@@ -41,6 +43,11 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
         byte myMaxByteValue = Byte.MAX_VALUE;
 
         System.out.println("~~Byte Values~~");
+        System.out.println("Bytes are ints whose range only extends from -128 to 127." + "\n" +
+                "The byte data type can be useful for saving memory in large arrays,\n" +
+                "where the memory savings actually matters.\n" +
+                "They can also be used in place of int where their limits help to clarify your code;\n" +
+                "the fact that a variable's range is limited can serve as a form of documentation." + "\n");
         System.out.println("Byte Minimum Value = " + myMinByteValue);
         System.out.println("Byte Maximum Value = " + myMaxByteValue);
         System.out.println("Busted MAX value = " + (myMaxByteValue + 1));
@@ -57,6 +64,8 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
         short myMaxShortValue = Short.MAX_VALUE;
 
         System.out.println("~~Short Values~~");
+        System.out.println("As with byte, the same guidelines apply: you can use a short to save memory in large arrays,\n" +
+                "in situations where the memory savings actually matters" + "\n");
         System.out.println("Short Minimum Value = " + myMinShortValue);
         System.out.println("Short Maximum Value = " + myMaxShortValue);
         System.out.println("Busted MAX value = " + (myMaxShortValue + 1));
@@ -76,6 +85,7 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
         long myMaxLongValue = Long.MAX_VALUE;
 
         System.out.println("~~Long Values~~");
+        System.out.println("Use this data type when you need a range of values wider than those provided by int." + "\n");
         System.out.println("Long Minimum Value = " + myMinLongValue);
         System.out.println("Long Maximum Value = " + myMaxLongValue);
         System.out.println("Busted MAX value = " + (myMaxLongValue + 1));
@@ -103,6 +113,8 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
 
 //Casting
         System.out.println("~~Casting~~");
+        System.out.println("Casting means to treat or convert a number from one type to another.\n" +
+                "We put the type we want the number to be in parentheses like so: (byte) (myMinByteValue/2);");
         byte myNewByteValue = (byte) (myMinByteValue / 2);
         System.out.println(myNewByteValue);
 
@@ -117,21 +129,32 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
          * Create an int variable and set it to any valid int number.
          * Create a variable of type long and make it equal to 50000...
          * ...plus 10 times the sum of the byte, short and int values.*/
-        System.out.println("~~ Primitive Types Challenge ~~\n" +
-                "        Create a byte variable and set it to any valid byte number.\n" +
-                "        Create a short variable and set it to any valid short number.\n" +
-                "        Create an int variable and set it to any valid int number.\n" +
-                "        Create a variable of type long and make it equal to 50000...\n" +
-                "        ...plus 10 times the sum of the byte, short and int values.*/");
+        System.out.println("        ,     \\    /      ,        \n" +
+                "       / \\    )\\__/(     / \\       \n" +
+                "      /   \\  (_\\  /_)   /   \\      \n" +
+                " ____/_____\\__\\@  @/___/_____\\____ \n" +
+                "|             |\\../|              |\n" +
+                "|              \\VV/               |\n" +
+                "| ~~ Primitive Types Challenge ~~ |\n" +
+                "|_________________________________|\n" +
+                " |    /\\ /      \\\\       \\ /\\    | \n" +
+                " |  /   V        ))       V   \\  | \n" +
+                " |/     `       //        '     \\| \n" +
+                " `              V                '\n" +
+                "Create a byte variable and set it to any valid byte number.\n" +
+                "Create a short variable and set it to any valid short number.\n" +
+                "Create an int variable and set it to any valid int number.\n" +
+                "Create a variable of type long and make it equal to 50000...\n" +
+                "...plus 10 times the sum of the byte, short and int values.*/");
         System.out.println(System.lineSeparator());
         byte a = 10;
         short b = 20;
         int c = 50;
 
 
-
     }
-    static void fDT(){
+
+    static void fDT() {
         String s = System.lineSeparator();
             /*Float: The float data type is a single-precision 32-bit IEEE 754 floating point.
         Its range of values is beyond the scope of this discussion,
@@ -149,7 +172,7 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
         As mentioned above, this data type should never be used for precise values, such as currency.*/
 
 //  Let's visualize these datatypes
-
+        System.out.println("~~~~~~~~~~~ Floats + Doubles ~~~~~~~~~~~");
         System.out.println("~~Float~~");
         float myMinFloatValue = Float.MIN_VALUE;
         float myMaxFloatValue = Float.MAX_VALUE;
@@ -179,16 +202,28 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
         System.out.println(s);
         System.out.println("However doubles are more precise than floats.");
         System.out.println("" +
-                "Integer: 5 / 3 = " + (myIntValue / 3) + "\n"+
-                "Float:   5 / 3 = " + (myFloatValue / 3f) + "\n"+
+                "Integer: 5 / 3 = " + (myIntValue / 3) + "\n" +
+                "Float:   5 / 3 = " + (myFloatValue / 3f) + "\n" +
                 "Double:  5 / 3 = " + (myDoubleValue / 3d));
 
         System.out.println(s);
 
         System.out.println(
-                "Challenge: Convert a given number of pounds to kilograms" + "\n" +
+                "        ,     \\    /      ,        \n" +
+                        "       / \\    )\\__/(     / \\       \n" +
+                        "      /   \\  (_\\  /_)   /   \\      \n" +
+                        " ____/_____\\__\\@  @/___/_____\\____ \n" +
+                        "|             |\\../|              |\n" +
+                        "|              \\VV/               |\n" +
+                        "|    Convert a given number of    |\n" +
+                        "|       pounds to kilograms       |\n" +
+                        "|_________________________________|\n" +
+                        " |    /\\ /      \\\\       \\ /\\    | \n" +
+                        " |  /   V        ))       V   \\  | \n" +
+                        " |/     `       //        '     \\| \n" +
+                        " `              V                '" + "\n" +
                         "1. Create a variable with the appropriate type to store the number of pounds to be converted to kilograms." + "\n" +
-                        "2. Calculate the result i.e. the number of kilograms based on the contents of the variable above and store the result" + "\n" + "in a 2nd appropriate variable." + "\n"+
+                        "2. Calculate the result i.e. the number of kilograms based on the contents of the variable above and store the result" + "\n" + "in a 2nd appropriate variable." + "\n" +
                         "3. Print the result." + "\n" +
                         "HINT: 1 pound is equal to 0.45359237 of a kilogram."
         );
@@ -204,11 +239,85 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html*/
         System.out.println("!!_.~\"~._.~\"~._.~\"~._.~\"~._!!");
     }
 
-    public static void main(String[] args) {
-iBSL();
-fDT();
+    static void charBool() {
+        // Char
+        /*A char is a single character, that is a letter, a digit, a punctuation mark, a tab,
+        a space or something similar. A char literal is a single one character
+        enclosed in single quote marks like this*/
+
+        System.out.println(System.lineSeparator());
+        System.out.println("~~~~~~~~~~~ Char + Boolean ~~~~~~~~~~~");
+        System.out.println("~~ Char ~~");
+
+        char myChar = 'D';
+        System.out.println("Chars can only hold a single character.");
+        System.out.println("My character is " + myChar);
+        System.out.println(System.lineSeparator());
+
+        // a char can also hold unicode symbols like so, '/u00A9'.
+        // find a symbol to try out here https://unicode-table.com/en/
+
+        char myUnicodeChar = '\u2625';
+        System.out.println("" +
+                "However you can also store unicode symbols! " + "\n" +
+                "You can do so by initiating a char. " + "\n" +
+                "Name the char and between the apostrophes add a '\\' and then the symbol's code ");
+        System.out.println("My unicode character is " + myUnicodeChar);
+        System.out.println(System.lineSeparator());
+
+
+        // Boolean
+        /* A Boolean data type can only have a value of either true of false.
+        Note that these are keywords that are reserved by the programming language meaning that
+        they cannot be used for variable, function, class, or object names!*/
+
+        System.out.println("~~ Boolean ~~");
+        System.out.println(System.lineSeparator());
+        System.out.println("A Boolean data type can only have a value of either true of false.\n" +
+                "Note that these are keywords that are reserved by the programming language meaning that\n" +
+                "they cannot be used for variable, function, class, or object names!");
+        System.out.println(System.lineSeparator());
+        System.out.println("You can initiate a boolean by typing boolean, naming it and setting it equal to either true or false.");
+        System.out.println("Example:" + "\n" +
+                "boolean trueBool = true;\n" +
+                           "boolean falseBool = false;");
+        System.out.println(System.lineSeparator());
+        System.out.println("An example of how one could use booleans.\n" +
+                "A website needs to know if the customer viewing the site is over 21\n" +
+                "before it can legally sell to the customer.\n" +
+                "A message appears asking the customer to select yes or no to the question, \"Are you over 18?\"\n" +
+                "The customer selects yes. The key \"isCust21\", our boolean, changes to true; based on the user's input." + "\n" +
+                "\n" +
+                "Below in the code editor, under public static void main," + "\n" +
+                "you will see a method called checkCustAge() you can enter any integer to see this example at work.");
+        System.out.println(System.lineSeparator());
     }
-}
+
+    static boolean checkCustomerAge(int custAge){
+
+        boolean isCust21 = true;
+
+         if (custAge >= 21) {
+             System.out.println("The customer is over 21!");
+             return isCust21 = true;
+
+        } else {
+             System.out.println("The customer is under 21!");
+             return isCust21 = false;
+
+        }
+    }
+
+
+
+        public static void main (String[] args){
+            iBSL();
+            fDT();
+            charBool();
+            checkCustomerAge(/*enter integer here*/);
+        }
+    }
+
 
 
 
